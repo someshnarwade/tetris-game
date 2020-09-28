@@ -116,7 +116,7 @@ while not game_over:
         count += 1
         print(f"Making new Shape: {count}")
 
-    # Check bottom row is full
+    # Check bottom row is full or not
     y = 23
     is_full = True
     for x in range(12):
