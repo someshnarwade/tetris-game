@@ -116,6 +116,18 @@ while not game_over:
         count += 1
         print(f"Making new Shape: {count}")
 
+    # Check bottom row is full
+    y = 23
+    is_full = True
+    for x in range(12):
+        if grid[y][x] == 0:
+            is_full = False
+            break
+    if is_full:
+        for y in range(22, -1, -1):
+            for x in range(12):
+                grid[y + 1][x] = grid[y][x]
+
     draw_grid(pen, grid)
     time.sleep(DELAY)
 
